@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>Visit my website!</title>
+	<link href="images/favicon.gif" rel="icon">
+	<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<link rel="stylesheet" href="stylesheets/styles.css">
+	<link rel="stylesheet" href="stylesheets/github-light.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/custom.css" type="text/css">
+	
+	<script>
+		img1 = new Image(400, 400)
+		img1.src = "images/logo.svg"
+		img2 = new Image(300, 300)
+		img2.src = "images/qr.svg"
+		
+		function SwapOut() {
+			document.imageflip.src = img2.src;
+			return true;
+		}
+		function SwapBack() {
+			document.imageflip.src = img1.src;
+			return true;
+		}
+	</script>
+	<script>
+		setTimeout(function(){
+			window.location='index.html';
+			}, 5000);
+	</script>
+</head>
+<body>
+  <div style="text-align: center;">
+    <a href="https://tiffwong.github.io/" onMouseOver="SwapOut()" onMouseOut="SwapBack()">
+    	<img name="imageflip" src="images/logo.svg" height="400" width="400">
+    </a>
+    <a href="https://tiffwong.github.io/">
+    	<h1 style="font-weight: bold;">
+    		TIFFANY WONG
+    	</h1>
+    	<h5>
+    		<small>
+    			REDIRECTING TO TIFFWONG.GITHUB.IO
+    		</small>
+    	</h5>
+    </a>
+  </div>
+</body>
+</html>
