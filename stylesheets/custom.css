@@ -1,0 +1,157 @@
+body {
+    background-image: url("../images/background.png");
+    background-repeat: repeat;
+    background-attachment: fixed;
+    font-family: "Roboto", sans-serif;
+    font-size: 13.5px;
+}
+
+a {
+    color: inherit;
+    target="_blank";
+    text-decoration: none;
+}
+a:hover {
+    color: #FFD50F;
+    text-decoration: none;
+}
+
+h1 {
+    font-family: 'Futura', Arial, sans-serif;
+    font-size: 26px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: bold;
+    line-height: 21.12px;
+}
+
+/* TABS: http://red-team-design.com/google-play-minimal-tabs-with-css3-jquery/ */
+#tabs {
+    overflow: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+#tabs li {
+    float: left;
+    margin: 0 -15px 0 0;
+}
+#tabs a {
+    float: left;
+    position: relative;
+    padding: 0 40px;
+    height: 0;
+    line-height: 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;      
+    border-right: 30px solid transparent;
+    border-bottom: 30px solid #3D3D3D;
+    border-bottom-color: #777;
+    opacity: .3;
+    filter: alpha(opacity=30);      
+}
+#tabs a:hover,
+#tabs a:focus {
+    border-bottom-color: #FFD50F;
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+#tabs a:focus {
+    outline: 0;
+}
+#tabs #current {
+    z-index: 3;
+    border-bottom-color: #3d3d3d;
+    opacity: 1;
+    filter: alpha(opacity=100);      
+}
+#content {
+    background: #fff;
+    border-top: 2px solid #3d3d3d;
+    padding: 1em;
+    margin-bottom: 4em;
+}
+#content h2,
+#content h3,
+#content p {
+    margin: 0 0 15px 0;
+}
+
+/* ROTATING WORDS: http://codepen.io/amritsinghlotay/pen/qERPmW/ */
+.slidingVertical{
+    display: inline;
+    text-indent: 8px;
+}
+.slidingVertical span{
+    animation: topToBottom 12.5s linear infinite 0s;
+    -ms-animation: topToBottom 12.5s linear infinite 0s;
+    -webkit-animation: topToBottom 12.5s linear infinite 0s;
+    color: #777777;
+    font-family: 'Futura', Arial, sans-serif;
+    font-size: 24px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+}
+.slidingVertical span:nth-child(2){
+    animation-delay: 2.5s;
+    -ms-animation-delay: 2.5s;
+    -webkit-animation-delay: 2.5s;
+}
+.slidingVertical span:nth-child(3){
+    animation-delay: 5s;
+    -ms-animation-delay: 5s;
+    -webkit-animation-delay: 5s;
+}
+.slidingVertical span:nth-child(4){
+    animation-delay: 7.5s;
+    -ms-animation-delay: 7.5s;
+    -webkit-animation-delay: 7.5s;
+}
+.slidingVertical span:nth-child(5){
+    animation-delay: 10s;
+    -ms-animation-delay: 10s;
+    -webkit-animation-delay: 10s;
+}
+@-moz-keyframes topToBottom{
+    0%   { opacity: 0; }
+    5%   { opacity: 0; -moz-transform: translateY(-50px); }
+    10%  { opacity: 1; -moz-transform: translateY(0px); }
+    25%  { opacity: 1; -moz-transform: translateY(0px); }
+    30%  { opacity: 0; -moz-transform: translateY(50px); }
+    80%  { opacity: 0; }
+    100% { opacity: 0; }
+}
+@-webkit-keyframes topToBottom{
+    0%   { opacity: 0; }
+    5%   { opacity: 0; -webkit-transform: translateY(-50px); }
+    10%  { opacity: 1; -webkit-transform: translateY(0px); }
+    25%  { opacity: 1; -webkit-transform: translateY(0px); }
+    30%  { opacity: 0; -webkit-transform: translateY(50px); }
+    80%  { opacity: 0; }
+    100% { opacity: 0; }
+}
+@-ms-keyframes topToBottom{
+    0%   { opacity: 0; }
+    5%   { opacity: 0; -ms-transform: translateY(-50px); }
+    10%  { opacity: 1; -ms-transform: translateY(0px); }
+    25%  { opacity: 1; -ms-transform: translateY(0px); }
+    30%  { opacity: 0; -ms-transform: translateY(50px); }
+    80%  { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+/* GRAYSCALE, RECOLOR ON MOUSEOVER */
+div.grayscale {
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+    filter: gray;
+    -webkit-filter: grayscale(100%);
+    margin-bottom: 25px;
+}
+
+div.grayscale:hover {
+    filter: none;
+    -webkit-filter: grayscale(0%);
+}
