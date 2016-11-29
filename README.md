@@ -1,5 +1,3 @@
 ### TODO
-* Remove css folder
-* Edit summary
-* Add icons for known programming languages (?)
+* Redesign portfolio section
 * Create mobile version

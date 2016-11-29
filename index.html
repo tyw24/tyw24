@@ -8,66 +8,87 @@
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
 
 	<title>Tiffany Wong</title>
-	<link href="images/favicon.gif" rel="icon">
-	<link rel="stylesheet" href="stylesheets/github-light.css">
-	<link rel="stylesheet" href="stylesheets/styles.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link href="http://68.media.tumblr.com/tumblr_lkl74gHrDR1qfamg6.gif" rel="icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" type="text/css">
-	<link rel="stylesheet" href="stylesheets/custom.css">
+    <link rel="stylesheet" href="https://afeld.github.io/emoji-css/emoji.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="css/github-light.css">
+    <link rel="stylesheet" href="css/style.css">
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-	<script src="js/custom.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<div class="wrapper">
-		<header style="text-align: center;">
-			<a href="https://tiffwong.github.io/">
-				<img src="images/logo.png" height="210" style="margin-top: -15px;">
-			</a>
-			<h1 style="font-weight: bold;">TIFFANY WONG</h1>
-			<p></p>
-			<h5 class="view">
-				<small>
-					<a href="mailto:tyw24@drexel.edu">CONTACT</a>
-					&nbsp;|&nbsp;
-					<a href="https://github.com/tiffwong">GITHUB</a>
-					&nbsp;|&nbsp;
-					<a href="https://www.linkedin.com/in/tiffyanwong">LINKEDIN</a>
-				</small>
-			</h5>
+    <div class="centered">
+        <span class="letter" data-letter="T">T</span>
+        <span class="letter" data-letter="I">I</span>
+        <span class="letter" data-letter="F">F</span>
+        <span class="letter" data-letter="F">F</span>
+        <span class="letter"> </span>
+        <span class="letter" data-letter="W">W</span>
+        <span class="letter" data-letter="O">O</span>
+        <span class="letter" data-letter="N">N</span>
+        <span class="letter" data-letter="G">G</span>
+    </div>
+    <div class="wrapper">
+		<header class="card centered profile">
+            <img class="img-circle" src="img/profile.jpg" width="200">
+			<p>
+                <a href="http://tiffwong.github.io">Tiffany Wong</a>
+            </p>
+            <div class="icon-bar">
+                <a href="mailto:tyw24@drexel.edu" data-toggle="tooltip" data-placement="bottom" title="Contact">
+                    <i class="fa fa-envelope"></i>
+                </a>
+                <a href="https://github.com/tiffwong" data-toggle="tooltip" data-placement="bottom" title="Github">
+                    <i class="fa fa-github-square"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/tiffyanwong" data-toggle="tooltip" data-placement="bottom" title="LinkedIn">
+                    <i class="fa fa-linkedin-square"></i>
+                </a> 
+                <a href="#" id="open-modal" data-toggle="tooltip" data-placement="bottom" title="Resume">
+                    <i class="fa fa-file"></i>
+                </a> 
+            </div>
+            <br>
 		</header>
+        <div id="modal" class="modal">
+            <span class="close">×</span>
+            <div class="modal-content" id="resume">
+                <img src="img/resume.jpg">
+                <p id="captionText">
+                    Click <a href="resume.pdf" download="Tiffany Wong - Resume">here</a> to download my resume.
+                </p>
+            </div>
+            <div id="caption"></div>
+        </div>
 		<section>
-			<h3>
-				<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true">
-					<span class="octicon octicon-link"></span>
-				</a>
-				<span style="font-weight: bold;">I am </span>
-				<div class="slidingVertical">
-					<span>a UX designer.</span>
-					<span>an undergraduate at Drexel University.</span>
-					<span>majoring in Computer Science.</span>
-					<span>graduating in 2018.</span>
-					<span>located in Philadelphia, PA.</span>
-				</div>
-			</h3>
-			<br><br>
+            <br>
 			<ul id="tabs">
 				<li><a href="#" name="#tab1">About</a></li>
-				<li><a href="#" name="#tab2">Projects</a></li>
-				<li><a href="#" name="#tab3">Resume</a></li>
+				<li><a href="#" name="#tab2">Portfolio</a></li>
 			</ul>
-			<div id="content" style="text-align: justify;">
+			<div id="content" class="card" style="text-align: justify;">
 				<div id="tab1">
-					<p>I am currently a third year student at Drexel University in a five year program. My major is Computer Science with focuses in Human-Computer Interaction and Software Engineering.
-					</p>
+					<p>Hi, my name is Tiffany!</p>
+                    <p>I am currently a junior at Drexel University majoring in Computer Science with concentrations in Human-Computer Interaction and Software Engineering.
+                       My interests include front-end developement, UX and mobile/web development.</p>
+                    <p>Besides designing web applications, I enjoy eating, playing board games and traveling.</p>
+                    <p>Places and things I've been to include:</p>
+                    <ul>
+                        <li><b>05 / 2014</b>&nbsp;&nbsp;-&nbsp;&nbsp;CodeDay Philly in Philadelphia, PA</li>
+                        <li><b>10 / 2014</b>&nbsp;&nbsp;-&nbsp;&nbsp;The Grace Hopper Conference in Phoenix, AZ</li>
+                        <li><b>02 / 2015</b>&nbsp;&nbsp;-&nbsp;&nbsp;FemmeHacks in Philadelphia, PA</li>
+                        <li><b>09 / 2015</b>&nbsp;&nbsp;-&nbsp;&nbsp;Intensive course abroad with Tamagawa University in Tokyo, Japan</li>
+                        <li><b>10 / 2016</b>&nbsp;&nbsp;-&nbsp;&nbsp;The Grace Hopper Conference in Houston, TX</li>
+                    </ul>
+                    <p>I will also be studying abroad at the City University of Hong Kong located in Kowloon Tong, Hong Kong this upcoming January to May.</p>
+                    <p>Thanks for visiting my website!</p>
 				</div>
 				<div id="tab2">
 					<div class="grayscale">
-						<a href="https://github.com/tiffwong/takeout">
-							<img class="img-thumbnail" align="left" width="125" src="images/logo-takeout.png">
-						</a>
+                        <img class="img-thumbnail logos" align="left" width="125" src="img/logo-takeout.png">
 						<h4 style="padding-top: 5px; padding-left: 135px;">
 							<a class="fa fa-fw fa-github" href="https://github.com/tiffwong/takeout"></a>
 							<a href="https://github.com/tiffwong/takeout">
@@ -79,15 +100,14 @@
 								<br>
 								Independent project (Ongoing)
 								<br>
-								The purpose of this project is to practice developing front-end by redesigning the 
-								website for my favorite takeout place, 
+								The purpose of this project is to practice developing front-end by redesigning the website for my favorite takeout place, 
 								<a href="http://www.upperdarbychinahouse.com/">China House</a>.
 							</small>
 						</h4>
 					</div>
 					<div class="grayscale">
 						<a href="https://github.com/rovaughn/parlor/tree/wireframe">
-							<img class="img-thumbnail" align="left" width="125" src="images/logo-parlor.png">
+							<img class="img-thumbnail" align="left" width="125" src="img/logo-parlor.png">
 							</a>
 						<h4 style="padding-top: 5px; padding-left: 135px;">
 							<a class="fa fa-fw fa-github" href="https://github.com/rovaughn/parlor/tree/wireframe"></a>
@@ -98,16 +118,16 @@
 							<small>
 								<b>Role:</b> Front-End Developer
 								<br>
-								Working with Alec Newman
+								Worked with Alec Newman
 								<br>
-								A distributed board game server that was created by a desire to play games with 
-								friends. The theme of the front-end is reminiscent of vintage board games.
+								A distributed board game server that was created by a desire to play games with friends. 
+                                The theme of the front-end is reminiscent of vintage board games.
 							</small>
 						</h4>
 					</div>
 					<div class="grayscale">
 						<a href="https://github.com/tiffwong/customer-profile">
-							<img class="img-thumbnail" align="left" width="125" src="images/logo-cp.png">
+							<img class="img-thumbnail" align="left" width="125" src="img/logo-cp.png">
 						</a>
 						<h4 style="padding-top: 5px; padding-left: 135px;">
 							<a class="fa fa-fw fa-github" href="https://github.com/tiffwong/customer-profile"></a>
@@ -120,14 +140,13 @@
 								<br>
 								Independent project
 								<br>
-								The purpose of this project was to design a wireframe utilizing a set of given 
-								components and organize the information is a logical manner.
+								The purpose of this project was to design a wireframe utilizing a set of given components and organize the information is a logical manner.
 							</small>
 						</h4>
 					</div>
 					<div class="grayscale">
 						<a href="https://github.com/tiffwong/dash-n-dine">
-							<img class="img-thumbnail" align="left" width="125" src="images/logo-dash&dine.png">
+							<img class="img-thumbnail" align="left" width="125" src="img/logo-dash&dine.png">
 						</a>
 						<h4 style="padding-top: 5px; padding-left: 135px;">
 							<a class="fa fa-fw fa-github" href="https://github.com/tiffwong/dash-n-dine"></a>
@@ -138,17 +157,16 @@
 							<small>
 								<b>Role:</b> Creative Director and Programmer
 								<br>
-								Worked with Michael Lurker and Eric Saputa
+								Worked with Michael Luker and Eric Saputa
 								<br>
-								This project was for CS 275 which focused on developing Android apps. This app 
-								facilitate deliveries from food trucks on-campus by availible students for 
-								students who are in class or otherwise busy.
+								This project was for CS 275 which focused on developing Android apps. 
+                                This app facilitate deliveries from food trucks on-campus by availible students for students who are in class or otherwise busy.
 							</small>
 						</h4>
 					</div>
 					<div class="grayscale">
 						<a href="https://www.dropbox.com/sh/hhavv8v3wcqu0n5/AABU5LiovWw4T1onD-DKN9IUa?dl=0">
-							<img class="img-thumbnail" align="left" width="125" src="images/logo-vip.png">
+							<img class="img-thumbnail" align="left" width="125" src="img/logo-vip.png">
 						</a>
 						<h4 style="padding-top: 5px; padding-left: 135px;">
 							<a class="fa fa-fw fa-dropbox" href="https://www.dropbox.com/sh/hhavv8v3wcqu0n5/AABU5LiovWw4T1onD-DKN9IUa?dl=0"></a>
@@ -161,17 +179,18 @@
 								<br>
 								Worked with Edward Aryee, Stevie Parris and Tom Sisson
 								<br>
-								This project was for ENGR 103 which focused on developing iOS apps. This app generates recipes that can be made using items that are 
-								already in the pantry.
+								This project was for ENGR 103 which focused on developing iOS apps. 
+                                This app generates recipes that can be made using items that are already in the pantry.
 							</small>
 						</h4>
 					</div>
 				</div>
-				<div id="tab3">
-					<object data="resume.pdf" height="720px" width="100%"></object>
-				</div>
 			</div>
 		</section>
 	</div>
+    <footer>
+        Last editied on November 28, 2016
+    </footer>
+    <script src="js/scripts.js"></script>
 </body>
 </html>
