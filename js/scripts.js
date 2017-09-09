@@ -2,22 +2,22 @@ $(function () {
 	// Reset tabs
 	function resetTabs(){
 		$("#content > div").hide();
-		$("#tabs a").attr("id","");     
+		$("#tabs a").attr("id","");
 	}
 
 	var myUrl        = window.location.href;
-	var myUrlTab     = myUrl.substring(myUrl.indexOf("#"));    
+	var myUrlTab     = myUrl.substring(myUrl.indexOf("#"));
 	var myUrlTabName = myUrlTab.substring(0,4);
-
+	
 	(function() {
-		$("#content > div").hide(); 
+		$("#content > div").hide();
 		$("#tabs li:first a").attr("id", "current");
-		$("#content > div:first").fadeIn(); 
+		$("#content > div:first").fadeIn();
 		$("#tabs a").on("click", function(e) {
 			e.preventDefault();
 			if ($(this).attr("id") == "current"){
-				return       
-			} else{             
+				return
+			} else{
 				resetTabs();
 				$(this).attr("id", "current");
 				$($(this).attr('name')).fadeIn();
@@ -36,7 +36,6 @@ $(function () {
 	// Scale fix
 	var metas = document.getElementsByTagName('meta');
 	var i;
-
 	if (navigator.userAgent.match(/iPhone/i)) {
 		for (i = 0; i < metas.length; i++) {
 			if (metas[i].name == "viewport") {
@@ -68,7 +67,7 @@ btn.onclick = function(){
 }
 
 var span = document.getElementsByClassName("close")[0];
-span.onclick = function() { 
+span.onclick = function() {
   modal.style.display = "none";
 }
 
@@ -80,6 +79,5 @@ window.onclick = function(event) {
 
 // Tooltip
 $(document).ready(function(){
-    $('[data-toggle="tooltip"]').tooltip(); 
+    $('[data-toggle="tooltip"]').tooltip();
 });
-
