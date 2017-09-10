@@ -13,6 +13,7 @@
 		-webkit-transform: scale(1.2);
 	}
 }
+
 @-moz-keyframes pulsate {
 	0% {
 		opacity: 1;
@@ -25,6 +26,7 @@
 		-webkit-transform: scale(1.2);
 	}
 }
+
 @keyframes pulsate {
 	0% {
 		opacity: 1;
@@ -43,41 +45,44 @@
     padding: 10px;
     position: relative;
 }
+
 #places-map img {
 	height: auto;
 	position: relative;
 	width: 100%;
 	z-index: 1;
 }
+
 #places-map h1 {
     font-size: 1.3125em;
     margin-top: 0.95238em;
     text-align: center;
 }
+
 #places-map p {
     text-align: left;
 }
+
 @media (min-width: 37.5em) {
     #places-map h1 {
         font-size: 2.1875em;
         margin-top: 0.94286em;
     }
 }
-.secondary-page #places-map .content {
-    margin: 0;
-    position: relative;
-}
+
 @media (min-width: 60em) {
     .secondary-page #places-map .content {
         margin: 0 auto;
     }
 }
+
 #places-map .map {
     position: relative;
     max-width: 56.4375em;
     margin-left: auto;
     margin-right: auto;
 }
+
 #places-map .map-pins {
     position: absolute;
     height: 100%;
@@ -85,6 +90,7 @@
     left: 0;
     width: 100%;
 }
+
 #places-map .map-location-marker {
     background: url(http://jeffbridgforth.com/codepen/map-pin.png) no-repeat;
     cursor: pointer;
@@ -95,31 +101,38 @@
     width: 1.3125em;
     z-index: 3;
 }
+
 @media (min-width: 48em) {
     .js #places-map .map-location-marker {
         visibility: hidden;
     }
 }
+
 #places-map .marker-philadelphia {
     left: 24%;
     top: 27%;
 }
+
 #places-map .marker-phoenix {
     left: 11%;
     top: 34%;
 }
+
 #places-map .marker-tokyo {
     left: 88.5%;
     top: 32%;
 }
+
 #places-map .marker-houston {
     left: 16%;
     top: 36%;
 }
+
 #places-map .marker-hong-kong {
     left: 83%;
     top: 41%;
 }
+
 #places-map .map-location-marker:after {
     animation: pulsate 2s ease-in-out infinite;
     -webkit-animation: pulsate 2s ease-in-out infinite;
@@ -142,10 +155,6 @@
     z-index: 2;
 }
 
-#page-places {
-    position: relative;
-}
-
 #map-info {
     background: #3d3d3d;
     color: white;
@@ -157,6 +166,7 @@
     width: 15.625em;
     z-index: 10;
 }
+
 #map-info .close-btn {
     background: url(http://jeffbridgforth.com/codepen//close-btn.png) no-repeat;
     cursor: pointer;
@@ -167,18 +177,21 @@
     right: 1.125em;
     top: 1.125em;
 }
+
 @media (min-width: 30em) {
     #map-info {
         top: 50%;
         margin-top: -8.875em;
     }
 }
+
 @media (min-width: 60em) {
     #map-info {
         margin-left: -8.875em;
         width: 17.75em;
     }
 }
+
 @media (min-width: 48em) {
     #map-info {
         margin-left: 0;
@@ -230,6 +243,7 @@
         top: 31%;
     }
 }
+
 #map-info h1 {
     color: white;
     float: left;
@@ -238,6 +252,7 @@
     margin-bottom: 0.72727em;
     margin-top: 0;
 }
+
 #map-info p {
     color: white;
     font-size: 14px;
