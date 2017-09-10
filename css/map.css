@@ -3,43 +3,43 @@
 /*-----------------------------------------------------------------------------*/
 @-webkit-keyframes pulsate {
 	0% {
-		-webkit-transform: scale(0.2);
-		transform: scale(0.2);
 		opacity: 1;
+		transform: scale(0.2);
+		-webkit-transform: scale(0.2);
 	}
 	100% {
-		-webkit-transform: scale(1.2);
-		transform: scale(1.2);
 		opacity: 0;
+		transform: scale(1.2);
+		-webkit-transform: scale(1.2);
 	}
 }
 @-moz-keyframes pulsate {
 	0% {
-		-webkit-transform: scale(0.2);
-		transform: scale(0.2);
 		opacity: 1;
+		transform: scale(0.2);
+		-webkit-transform: scale(0.2);
 	}
 	100% {
-		-webkit-transform: scale(1.2);
-		transform: scale(1.2);
 		opacity: 0;
+		transform: scale(1.2);
+		-webkit-transform: scale(1.2);
 	}
 }
 @keyframes pulsate {
 	0% {
-		-webkit-transform: scale(0.2);
-		transform: scale(0.2);
 		opacity: 1;
+		transform: scale(0.2);
+		-webkit-transform: scale(0.2);
 	}
 	100% {
-		-webkit-transform: scale(1.2);
-		transform: scale(1.2);
 		opacity: 0;
+		transform: scale(1.2);
+		-webkit-transform: scale(1.2);
 	}
 }
 
 #places-map {
-    background: #fff;
+    background: white;
     padding: 10px;
     position: relative;
 }
@@ -121,23 +121,23 @@
     top: 41%;
 }
 #places-map .map-location-marker:after {
+    animation: pulsate 2s ease-in-out infinite;
     -webkit-animation: pulsate 2s ease-in-out infinite;
     -moz-animation: pulsate 2s ease-in-out infinite;
-    animation: pulsate 2s ease-in-out infinite;
     background: transparent;
-    border: 2px solid #fff;
+    border: 2px solid white;
     border-radius: 30px;
     content: "";
     display: block;
     height: 31px;
-    left: -7px;
+    left: -5.5px;
     opacity: 0;
     position: absolute;
-    top: -8px;
+    top: -7px;
+    transition: all .25s linear;
     -webkit-transition: all .25s linear;
     -moz-transition: all .25s linear;
     -o-transition: all .25s linear;
-    transition: all .25s linear;
     width: 31px;
     z-index: 2;
 }
@@ -148,7 +148,7 @@
 
 #map-info {
     background: #3d3d3d;
-    color: #fff;
+    color: white;
     position: absolute;
     top: -1.5625em;
     left: 50%;
@@ -199,15 +199,15 @@
     }
     #map-info.philadelphia {
         left: 28%;
-        top: 20%;
+        top: 17%;
     }
     #map-info.phoenix {
         left: 15%;
-        top: 27%;
+        top: 24%;
     }
     #map-info.houston {
         left: 20%;
-        top: 29%;
+        top: 26%;
     }
     #map-info.tokyo:before,
     #map-info.hong-kong:before {
@@ -219,15 +219,15 @@
         border-width: 13px 16px 13px 16px;
         border-color: transparent transparent transparent #3d3d3d;
         position: absolute;
-        left: 219px;
+        right: -32px;
     }
     #map-info.tokyo {
-        left: 49.5%;
-        top: 25%;
+        left: 39%;
+        top: 22%;
     }
     #map-info.hong-kong {
-        left: 44%;
-        top: 34%;
+        left: 33.75%;
+        top: 31%;
     }
 }
 #map-info h1 {
@@ -240,5 +240,6 @@
 }
 #map-info p {
     color: white;
+    font-size: 14px;
     margin: 11px auto;
 }
