@@ -92,7 +92,7 @@
 }
 
 #places-map .map-location-marker {
-    background: url(http://jeffbridgforth.com/codepen/map-pin.png) no-repeat;
+    background: url(../img/map-pin.png) no-repeat;
     cursor: pointer;
     position: absolute;
     height: 1.875em;
