@@ -30,12 +30,9 @@ h1 {
     margin: 10px 15px;
 }
 
-p, ul, ol, table, pre, dl {
-    margin: 0 0 24px;
-}
-
 a {
     color: inherit;
+    font-weight: bold;
     text-decoration: none;
 }
 a:hover {
@@ -76,9 +73,7 @@ footer {
 }
 
 
-/* ### Welcome Text ### */
-/* For more information, http://tympanus.net/codrops/2013/11/14/animated-opening-type/ */
-
+/* ### Welcome Text ########################################################## */
 *, *:before, *:after {
     box-sizing: border-box;
 }
@@ -146,13 +141,13 @@ header {
     -webkit-font-smoothing: subpixel-antialiased;
 }
 header img {
-    margin: 18px 15px 15px;
+    margin: 15px;
     width: 200px;
 }
 .icon-bar {
     background-color: #555;
     border-radius: 2px;
-    margin: 20px 5% auto 5%;
+    margin: 18px 5% auto 5%;
     overflow: auto;
     text-align: center;
     width: 90%;
