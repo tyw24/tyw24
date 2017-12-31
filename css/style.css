@@ -7,27 +7,27 @@
 html {
     overflow-y: scroll;
 }
-
 body {
     font-family: var(--calibri);
     font-size: 16px;
 }
 
-h1 {
+.wrapper {
+    margin: 0 auto;
+    width: 1000px;
+}
+
+h1, h4 {
     color: #222;
     font-family: var(--roboto);
+    text-transform: uppercase;
+}
+h1 {
     font-size: 26px;
     font-weight: bold;
     letter-spacing: 2px;
     line-height: 21.12px;
-    margin: 10px 0 15px;
-    text-transform: uppercase;
-}
-
-h4 {
-    color: #222;
-    font-family: var(--roboto);
-    text-transform: uppercase;
+    margin: 10px 15px;
 }
 
 p, ul, ol, table, pre, dl {
@@ -38,30 +38,22 @@ a {
     color: inherit;
     text-decoration: none;
 }
-
 a:hover {
     color: var(--yellow);
     text-decoration: none;
 }
 
-.wrapper {
-    margin: 0 auto;
-    width: 1000px;
-}
-
 img {
-    max-width: 100%;
+    width: 100%;
 }
 
-header {
-    float: left;
-    width: 270px;
-    -webkit-font-smoothing: subpixel-antialiased;
+.centered {
+    text-align: center;
 }
 
-header img {
-    margin: 15px;
-    width: 200px;
+.card {
+    background-color: white;
+    transition: 0.3s;
 }
 
 section {
@@ -78,43 +70,18 @@ footer {
     font-style: italic;
     height: 24px;
     width: 100%;
-    padding: 8px 15px 15px 15px;
+    padding: 8px 15px 15px;
     position: fixed;
     text-align: right;
-    -webkit-font-smoothing: subpixel-antialiased;
 }
 
-@media print, screen and (max-width: 960px) {
-    div.wrapper {
-        margin: 0;
-        width: auto;
-    }
-    header, section, footer {
-        float: none;
-        position: static;
-        width: auto;
-    }
-    header {
-        padding-right: 320px;
-    }
-    section {
-        border: 1px solid #e5e5e5;
-        border-width: 1px 0;
-        padding: 20px 0;
-        margin: 0 0 20px;
-    }
-    header a small {
-        display: inline;
-    }
-}
 
-/*-----------------------------------------------------------------------------*/
-/* OPENING TEXT: http://tympanus.net/codrops/2013/11/14/animated-opening-type/ */
-/*-----------------------------------------------------------------------------*/
+/* ### Welcome Text ### */
+/* For more information, http://tympanus.net/codrops/2013/11/14/animated-opening-type/ */
+
 *, *:before, *:after {
-    box-sizing:border-box;
+    box-sizing: border-box;
 }
-
 .letter {
     color: #333;
     display: inline-block;
@@ -126,7 +93,6 @@ footer {
     transform-style: preserve-3d;
     z-index: 1;
 }
-
 .letter:before, .letter:after {
     content: attr(data-letter);
     left: 0;
@@ -134,13 +100,11 @@ footer {
     top: 0;
     transform-origin: top left;
 }
-
 .letter, .letter:before, .letter:after {
     transition: all 0.3s ease-in-out;
 }
-
 .letter:before {
-    color: white;
+    color: var(--yellow);
     text-shadow: -1px 0px 1px rgba(255, 255, 255, .8), 1px 0px 1px rgba(0, 0, 0, .8);
     transform:
         rotateX(0deg)
@@ -148,7 +112,6 @@ footer {
         rotateZ(0deg);
     z-index: 3;
 }
-
 .letter:after {
     color: rgba(0, 0, 0, .11);
     transform:
@@ -159,15 +122,13 @@ footer {
         skew(0deg, 1deg);
     z-index: 2;
 }
-
 .letter:hover:before {
-    color: #fafafa;
+    color: var(--yellow);
     transform:
         rotateX(0deg)
         rotateY(-40deg)
         rotateZ(0deg);
 }
-
 .letter:hover:after {
     transform:
         scale(1.08, 1)
@@ -177,9 +138,100 @@ footer {
         skew(0deg, 22deg);
 }
 
-/*-----------------------------------------------------------------------------*/
-/* TABS: http://red-team-design.com/google-play-minimal-tabs-with-css3-jquery/ */
-/*-----------------------------------------------------------------------------*/
+
+/* ### Header ################################################################ */
+header {
+    float: left;
+    width: 270px;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+header img {
+    margin: 18px 15px 15px;
+    width: 200px;
+}
+.icon-bar {
+    background-color: #555;
+    border-radius: 2px;
+    margin: 20px 5% auto 5%;
+    overflow: auto;
+    text-align: center;
+    width: 90%;
+}
+.icon-bar a {
+    color: white;
+    font-size: 12px;
+    float: left;
+    padding: 5px 0;
+    transition: all 0.3s ease;
+    width: 25%;
+}
+.icon-bar a:hover {
+    background-color: #ffd50f;
+}
+
+
+/* ### Modal ################################################################# */
+.modal {
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+    display: none;
+    overflow: auto;
+    position: fixed;
+    padding-top: 100px;
+    top: 0;
+    width: 100%;
+    z-index: 4;
+}
+.modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+}
+.modal-content {
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    max-width: 700px;
+    transition: 0.3s;
+}
+#caption {
+    color: #ccc;
+    display: block;
+    margin: auto auto 100px;
+    max-width: 700px;
+    padding: 10px 0;
+    text-align: center;
+}
+#captionText {
+    display: none;
+}
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)}
+    to {-webkit-transform:scale(1)}
+}
+.close {
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    transition: 0.3s;
+}
+.close:hover, .close:focus {
+    color: #bbb;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+/* ### Tabs ################################################################## */
 #tabs {
     margin: 0;
     list-style: none;
@@ -187,12 +239,10 @@ footer {
     padding: 0;
     width: 100%;
 }
-
 #tabs li {
     float: left;
     margin: 0 -15px 0 0;
 }
-
 #tabs a {
     color: white;
     border-bottom: 30px solid #777;
@@ -207,25 +257,17 @@ footer {
     text-decoration: none;
     text-transform: uppercase;
 }
-
-#tabs a:hover,
-#tabs a:focus {
+#tabs a:hover, #tabs a:focus {
     border-bottom-color: var(--yellow);
     filter: alpha(opacity=100);
     opacity: 1;
 }
-
-#tabs a:focus {
-    outline: 0;
-}
-
 #tabs #current {
     border-bottom-color: #3d3d3d;
     filter: alpha(opacity=100);
     opacity: 1;
     z-index: 3;
 }
-
 #content {
     background: white;
     border-top: 2px solid #3d3d3d;
@@ -233,13 +275,8 @@ footer {
     padding: 1em;
 }
 
-#content p {
-    margin: 0 0 15px 0;
-}
 
-/*-----------------------------------------------------------------------------*/
-/* GRAYSCALE, RECOLOR ON MOUSEOVER                                             */
-/*-----------------------------------------------------------------------------*/
+/* ### Tab: Project ########################################################## */
 .project {
     display: inline-block;
     filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
@@ -249,12 +286,10 @@ footer {
     width: calc(100% / 2 - 5px);
     -webkit-filter: grayscale(100%);
 }
-
 .project:hover {
     filter: none;
     -webkit-filter: grayscale(0%);
 }
-
 .project img {
     border: 1px solid #e5e5e5;
     border-radius: 5px;
@@ -263,7 +298,6 @@ footer {
     padding: 15px;
     width: 100%;
 }
-
 .project div {
     background-color: #3d3d3d;
     border-radius: 2px;
@@ -272,121 +306,48 @@ footer {
     padding: 10px;
 }
 
-/*-----------------------------------------------------------------------------*/
-/* MISC.                                                                       */
-/*-----------------------------------------------------------------------------*/
-.centered {
-    text-align: center;
-}
 
-.icon-bar {
-    background-color: #555;
-    border-radius: 2px;
-    margin: -10px 5% auto 5%;
-    overflow: auto;
-    text-align: center;
-    width: 90%;
-}
-
-.icon-bar a {
-    color: white;
-    font-size: 12px;
-    float: left;
-    padding: 5px 0;
-    transition: all 0.3s ease;
-    width: 25%;
-}
-
-.icon-bar a:hover {
-    background-color: #ffd50f;
-}
-
-.card {
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-}
-
-.card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
-
-#resume {
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-#captionText{
-    display: none;
-}
-
-.modal {
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.9);
-    display: none;
-    overflow: auto;
-    position: fixed;
-    padding-top: 100px;
-    top: 0;
-    width: 100%;
-    z-index: 4;
-}
-
-.modal-content {
-    display: block;
-    margin: auto;
-    max-width: 700px;
-    width: 80%;
-}
-
-#caption {
-    color: #ccc;
-    display: block;
-    margin: auto auto 100px;
-    max-width: 700px;
-    padding: 10px 0;
-    text-align: center;
-    width: 80%;
-}
-
-.modal-content, #caption {
-    animation-name: zoom;
-    animation-duration: 0.6s;
-    -webkit-animation-name: zoom;
-    -webkit-animation-duration: 0.6s;
-}
-
-@-webkit-keyframes zoom {
-    from {-webkit-transform:scale(0)}
-    to {-webkit-transform:scale(1)}
-}
-
-@keyframes zoom {
-    from {transform:scale(0)}
-    to {transform:scale(1)}
-}
-
-.close {
-    color: #f1f1f1;
-    font-size: 40px;
-    font-weight: bold;
-    position: absolute;
-    right: 35px;
-    top: 15px;
-    transition: 0.3s;
-}
-
-.close:hover,
-.close:focus {
-    color: #bbb;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-/* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 700px){
-    .modal-content {
-        width: 100%;
+/* ### Responsiveness: Mobile Phones and Tablets ############################# */
+@media print, screen and (max-width: 960px) {
+    .wrapper {
+        margin: 0;
+        width: auto;
+    }
+    header, section, footer {
+        float: none;
+        position: static;
+        width: auto;
+    }
+    header img {
+        margin-top: 0px;
+    }
+    section {
+        border-width: 1px 0;
+        padding: 20px 5%;
+        margin: 0 0 20px;
+    }
+    section .card {
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    }
+    section .card:hover {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    }
+    header a small {
+        display: inline;
+    }
+    .letter {
+        margin-bottom: 0px !important;
     }
 }
+
+
+/* ### Responsiveness: Desktops ############################################## */
+@media print, screen and (min-width: 960px) {
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    }
+    .card:hover {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    }
+}
+
