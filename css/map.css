@@ -92,7 +92,7 @@
 }
 
 #places-map .map-location-marker {
-    background: url(../img/map-pin.png) no-repeat;
+    background: url(http://jeffbridgforth.com/codepen/map-pin.png) no-repeat;
     cursor: pointer;
     position: absolute;
     height: 1.875em;
@@ -131,6 +131,11 @@
 #places-map .marker-hong-kong {
     left: 83%;
     top: 41%;
+}
+
+#places-map .marker-orlando {
+    left: 20%;
+    top: 39%;
 }
 
 #places-map .map-location-marker:after {
@@ -199,7 +204,8 @@
     }
     #map-info.philadelphia:before,
     #map-info.phoenix:before,
-    #map-info.houston:before {
+    #map-info.houston:before,
+    #map-info.orlando:before {
         content: "";
         display: block;
         width: 0;
@@ -221,6 +227,10 @@
     #map-info.houston {
         left: 20%;
         top: 26%;
+    }
+    #map-info.orlando {
+        left: 24%;
+        top: 29%;
     }
     #map-info.tokyo:before,
     #map-info.hong-kong:before {
