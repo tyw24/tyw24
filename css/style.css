@@ -531,5 +531,6 @@ nav li a, nav li a:focus, nav li a:hover {
 	}
 	.project .project-title {
 		font-size: 12px;
+		margin-top: -5px;
 	}
 }
