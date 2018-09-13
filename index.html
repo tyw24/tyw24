@@ -3,166 +3,108 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="author"   content="Tiffany Wong">
-	<meta name="keywords" content="computer science, drexel, tiffany wong, front end, ui, user interface, ux, user experience, web, web designer, web developer">
-	<meta name="viewport" content="width=device-width">
+	<meta name="keywords" content="tiffany wong, computer science, drexel, designer, developer, front end, ui, user interface, ux, user experience, web, web designer, web developer">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
 
-	<title>Tiffany Wong</title>
+	<title>» Tiffany Wong</title>
 	<link href="http://68.media.tumblr.com/tumblr_lkl74gHrDR1qfamg6.gif" rel="icon">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/map.css">
 </head>
 <body>
-    <div class="centered">
-        <span class="letter" data-letter="H">H</span>
-        <span class="letter" data-letter="E">E</span>
-        <span class="letter" data-letter="L">L</span>
-        <span class="letter" data-letter="L">L</span>
-        <span class="letter" data-letter="O">O</span>
-        <span class="letter" data-letter="!">!</span>
-    </div>
-    <div class="wrapper">
-		<header class="card centered profile">
-            <img class="img-circle" src="img/profile.jpg" width="200">
-			<h1>Tiffany Wong</h1>
-            <div class="icon-bar">
-                <a href="mailto:tyw24@drexel.edu" data-toggle="tooltip" data-placement="bottom" title="Contact">
-                    <i class="fa fa-envelope"></i>
-                </a>
-                <a href="https://github.com/tiffwong" data-toggle="tooltip" data-placement="bottom" title="Github">
-                    <i class="fa fa-github-square"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/tffwng" data-toggle="tooltip" data-placement="bottom" title="LinkedIn">
-                    <i class="fa fa-linkedin-square"></i>
-                </a>
-                <a href="#" id="open-modal" data-toggle="tooltip" data-placement="bottom" title="Resume">
-                    <i class="fa fa-file"></i>
-                </a>
-            </div>
-            <br>
-		</header>
-        <div id="modal" class="modal">
+	<nav>
+		<div class="avatar">
+			<div class="background"></div>
+			<div class="background-hide"></div>
+			<div class="head">
+				<div class="hair_back"></div>
+				<div class="hair_front-l"></div>
+				<div class="hair_front-r"></div>
+				<div class="eyebrows"></div>
+				<div class="eyes"></div>
+				<div class="nose"></div>
+				<div class="mouth"></div>
+			</div>
+			<div class="neck"></div>
+			<div class="body"></div>
+			<div class="arm-r"></div>
+			<div class="arm-l"></div>
+			<div class="animate">
+				<div class="arm-l_wave"></div>
+				<div class="hand"></div>
+			</div>
+		</div>
+		<ul>
+			<li><a href="#about">About</a></li>
+			<li><a href="#projects">Projects</a></li>
+			<li><a href="#" id="open-modal">Resume</a></li>
+		</ul>
+	</nav>
+	<div class="content">
+		<div id="modal" class="modal">
             <span class="close">×</span>
             <div class="modal-content" id="resume">
-                <img src="img/resume.jpg">
+                <img src="img/resume.png" width="100%">
                 <p id="captionText">
                     Click <a href="resume.pdf" download="Tiffany Wong - Resume">here</a> to download my resume.
                 </p>
             </div>
             <div id="caption"></div>
         </div>
-		<section>
-			<ul id="tabs">
-				<li><a href="#" name="#tab1">About</a></li>
-				<li><a href="#" name="#tab2">Projects</a></li>
-				<li><a href="#" name="#tab3">Travels</a></li>
-			</ul>
-			<div id="content" class="card" style="text-align: justify;">
-				<div id="tab1">
-                    <p>I am a student at Drexel University pursuing a Bachelor of Science in Computer Science and will graduate in June 2018.
-                       Through the process of exploring all the facets of programming while focusing my studies in Human-Computer Interaction and Software Engineering,
-                       I have found that my passions lie in front-end web development and UX.</p>
-                    <p>My other interests include trying new foods, playing board games and planning my next adventure.
-                       Earlier this year, I studied abroad in Hong Kong and while I was there, I travelled to Taiwan, Vietnam, Thailand, Korea and Japan.</p>
-                    <p>Currently, I am exploring opportunities in front-end web development in Philadelphia. I am looking for a career where I can grow as a developer and a designer.</p>
-                    <p>Thanks for visiting my website! :)</p>
-				</div>
-
-				<div id="tab2">
+        <div id="about">
+        	<h1>Tiffany Wong</h1>
+			<p>#webdeveloper #ux #philadelphia</p>
+			<p>I am a Web Developer located in Philadelphia with a passion for UX and design. I currently work at Comcast as part of the prototyping team where we create high fidelity prototypes used to show stakeholders, perform A/B testing, and easily reflect architectural changes.</p>
+			<p>As a recent graduate of Drexel University, I majored in Computer Science with concentrations in Human-Computer Interaction and Software Engineering. I also had the honor of being one of the speakers at my <a href="https://youtu.be/18auVGQPj0g?list=WL&t=1244" target="_blank">commencement</a>.</p>
+			<div class="social">
+				<a href="https://github.com/tiffwong" alt="Github"><i class="fab fa-fw fa-github"></i></a>
+				<a href="https://codepen.io/tiffwong/" alt="CodePen"><i class="fab fa-fw fa-codepen"></i></a>
+				<a href="https://www.linkedin.com/in/tffwng" alt="LinkedIn"><i class="fab fa-fw fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div id="projects">
+			<h2>Projects</h2>
+			<div class="projects">
+				<a href="comcast-business/index.html">
 					<div class="project">
-                        <img src="img/logo-takeout.png" style="padding-top: 110px; padding-bottom: 110px;">
-						<h4>▸ <a href="https://github.com/tiffwong/takeout">Takeout</a></h4>
-						<div>
-							<b>Role:</b> Sole Programmer
-							<br>
-							Independent project (Ongoing)
-							<br>
-							The purpose of this project is to practice developing front-end by redesigning the website for my favorite takeout place,
-							<a href="http://www.upperdarbychinahouse.com/">China House</a>.
-							<br><br>
-						</div>
+						<span class="project-title">Comcast Business</span>
 					</div>
+				</a>
+				<a href="drexel-wics/index.html">
 					<div class="project">
-					    <img src="img/logo-parlor.png">
-						<h4>▸ <a href="https://github.com/rovaughn/parlor/tree/wireframe">Parlor</a></h4>
-						<div>
-							<b>Role:</b> Front-End Developer
-							<br>
-							Worked with Alec Newman
-							<br>
-							A distributed board game server that was created by a desire to play games with friends.
-                            The theme of the front-end is reminiscent of vintage board games.
-						</div>
+						<span class="project-title">Drexel WiCS</span>
 					</div>
+				</a>
+				<a href="smart-security/index.html">
 					<div class="project">
-						<h4>▸ <a href="https://github.com/tiffwong/customer-profile">Customer Profile Wireframe</a></h4>
-						<div>
-							<b>Role:</b> Sole Programmer
-							<br>
-							Independent project
-							<br>
-							The purpose of this project was to design a wireframe utilizing a set of required components and organize the information in a logical manner.
-							<br><br>
-						</div>
+						<span class="project-title">Smart Security</span>
 					</div>
+				</a>
+				<a href="castle/index.html">
 					<div class="project">
-						<h4>▸ <a href="https://github.com/tiffwong/dash-n-dine">Dash & Dine</a></h4>
-						<div>
-							<b>Role:</b> Creative Director and Programmer
-							<br>
-							Worked with Michael Luker and Eric Saputa
-							<br>
-							This project was created for CS 275 which focused on developing Android apps.
-                            This app facilitate deliveries from food trucks by availible students for students who are busy.
-						</div>
+						<span class="project-title">CASTLE</span>
 					</div>
+				</a>
+				<a href="walmart-labs/index.html">
 					<div class="project">
-						<h4>▸ <a href="https://www.dropbox.com/sh/hhavv8v3wcqu0n5/AABU5LiovWw4T1onD-DKN9IUa?dl=0">Virtual Integrated Pantry</a></h4>
-						<div>
-							<b>Role:</b> Creative Director and Programmer
-							<br>
-							Worked with Edward Aryee, Stevie Parris and Tom Sisson
-							<br>
-							This project was for ENGR 103 which focused on developing iOS apps.
-                            This app generates recipes that can be made using items that are already in the pantry.
-						</div>
+						<span class="project-title">Walmart Labs</span>
 					</div>
-				</div>
-
-				<div id="tab3">
-				    <br>
-				    <div id="places-map">
-                        <div class="map">
-                            <img src="img/map.png"/>
-                            <div class="map-pins">
-                                <a class="map-location-marker marker-philadelphia" data-map-title="Philadelphia" data-map-link="philadelphia"
-                                    data-map-event="CodeDay Philly Hackathon, <br>Received award for 'Best Game'" data-map-date="May 24 - 25, 2014"></a>
-                                <a class="map-location-marker marker-phoenix" data-map-title="Phoenix" data-map-link="phoenix"
-                                    data-map-event="Grace Hopper Conference" data-map-date="October 8 - 11, 2014"></a>
-                                <a class="map-location-marker marker-tokyo" data-map-title="Tokyo" data-map-link="tokyo"
-                                    data-map-event="Intensive course abroad partnered with Tamagawa University" data-map-date="September 5 - 16, 2015"></a>
-                                <a class="map-location-marker marker-houston" data-map-title="Houston" data-map-link="houston"
-                                    data-map-event="Grace Hopper Conference" data-map-date="October 19 - 21, 2016"></a>
-                                <a class="map-location-marker marker-hong-kong" data-map-title="Hong Kong" data-map-link="hong-kong"
-                                    data-map-event="Studied abroad at the City University of Hong Kong" data-map-date="January to May 2017"></a>
-                                <a class="map-location-marker marker-orlando" data-map-title="Orlando" data-map-link="orlando"
-                                    data-map-event="Grace Hopper Conference" data-map-date="October 3 - 6, 2017"></a>
-                            </div>
-                            <br><br>
-                            <h6><i class="fa fa-paper-plane-o"></i> <i>Note: Only trips related to academic or career pursuits have been listed.</i></h6>
-                        </div>
-                    </div>
-				</div>
+				</a>
+				<a href="customer-profile/index.html">
+					<div class="project">
+						<span class="project-title">Customer Profile</span>
+					</div>
+				</a>
 			</div>
-		</section>
+        </div>
 	</div>
-    <footer>Last editied on December 31, 2017</footer>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="js/scripts.js"></script>
-    <script src="js/map.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
