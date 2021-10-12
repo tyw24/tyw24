@@ -25,13 +25,14 @@ function Content() {
 
 	return (
 		<div className={classes.root}>
-			<Router>
+			<Router basename={process.env.PUBLIC_URL}>
 				<Switch>
-					<Route path="/projects/:project">
-						<ProjectDetail />
-					</Route>
-					<Route component={Projects} path={`${path}/projects`} />
-					<Route component={Resume} path={`${path}/resume`} />
+					<Route
+						component={ProjectDetail}
+						path={`${path}/projects/:project`}
+					/>
+					<Route component={Projects} path="/projects" />
+					<Route component={Resume} path="/resume" />
 					<Route component={About} path="/" />
 				</Switch>
 			</Router>
