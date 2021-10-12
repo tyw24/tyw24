@@ -1,4 +1,4 @@
-import { Box } from "@material-ui/core";
+import { Box, Link } from "@material-ui/core";
 import { makeStyles, Theme } from "@material-ui/core/styles";
 import React from "react";
 import Avatar from "./Avatar";
@@ -83,33 +83,20 @@ function Nav() {
 			<Avatar />
 			<nav className={classes.nav} aria-label="">
 				<ul id="menu" role="menubar" aria-label="">
-					<li role="none">
-						<a
-							className={classes.link}
-							href="/"
-							role="menuitem"
-							tabIndex={0}
-						>
+					<li>
+						<Link className={classes.link} href="/" tabIndex={0}>
 							About
-						</a>
+						</Link>
 					</li>
-					<li role="none">
-						<a
-							className={classes.link}
-							href={`${path}/projects`}
-							role="menuitem"
-						>
+					<li>
+						<Link className={classes.link} href="/projects">
 							Projects
-						</a>
+						</Link>
 					</li>
-					<li role="none">
-						<a
-							className={classes.link}
-							href={`${path}/resume`}
-							role="menuitem"
-						>
+					<li>
+						<Link className={classes.link} href="/resume">
 							Resume
-						</a>
+						</Link>
 					</li>
 				</ul>
 			</nav>

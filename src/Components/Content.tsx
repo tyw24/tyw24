@@ -24,7 +24,7 @@ function Content() {
 
 	return (
 		<div className={classes.root}>
-			<Router>
+			<Router basename={process.env.PUBLIC_URL}>
 				<Switch>
 					<Route
 						component={ProjectDetail}
