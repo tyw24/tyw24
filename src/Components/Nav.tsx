@@ -71,6 +71,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 
 function Nav() {
 	const classes = useStyles();
+	const path = "tiffwong.github.io";
 
 	return (
 		<Box
@@ -95,7 +96,7 @@ function Nav() {
 					<li role="none">
 						<a
 							className={classes.link}
-							href="/projects"
+							href={`${path}/projects`}
 							role="menuitem"
 						>
 							Projects
@@ -104,7 +105,7 @@ function Nav() {
 					<li role="none">
 						<a
 							className={classes.link}
-							href="/resume"
+							href={`${path}/resume`}
 							role="menuitem"
 						>
 							Resume
