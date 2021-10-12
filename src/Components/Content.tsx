@@ -32,7 +32,7 @@ function Content() {
 					</Route>
 					<Route component={Projects} path={`${path}/projects`} />
 					<Route component={Resume} path={`${path}/resume`} />
-					<Route component={About} path={path} />
+					<Route component={About} path="/" />
 				</Switch>
 			</Router>
 		</div>
