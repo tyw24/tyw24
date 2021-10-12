@@ -21,7 +21,6 @@ const useStyles = makeStyles((theme: Theme) => ({
 
 function Content() {
 	const classes = useStyles();
-	const path = "tiffwong.github.io";
 
 	return (
 		<div className={classes.root}>
@@ -30,8 +29,8 @@ function Content() {
 					<Route path="/projects/:project">
 						<ProjectDetail />
 					</Route>
-					<Route component={Projects} path={`${path}/projects`} />
-					<Route component={Resume} path={`${path}/resume`} />
+					<Route component={Projects} path="/projects" />
+					<Route component={Resume} path="/resume" />
 					<Route component={About} path="/" />
 				</Switch>
 			</Router>
