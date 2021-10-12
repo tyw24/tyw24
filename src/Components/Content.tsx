@@ -21,15 +21,14 @@ const useStyles = makeStyles((theme: Theme) => ({
 
 function Content() {
 	const classes = useStyles();
-	const path = "tiffwong.github.io";
 
 	return (
 		<div className={classes.root}>
-			<Router basename={process.env.PUBLIC_URL}>
+			<Router>
 				<Switch>
 					<Route
 						component={ProjectDetail}
-						path={`${path}/projects/:project`}
+						path="/projects/:project"
 					/>
 					<Route component={Projects} path="/projects" />
 					<Route component={Resume} path="/resume" />
