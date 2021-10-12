@@ -1,6 +1,8 @@
 import { Link, Tooltip, Typography } from "@material-ui/core";
 import { makeStyles, Theme } from "@material-ui/core/styles";
 import React from "react";
+// import { Document } from "react-pdf";
+import { Document } from "react-pdf/dist/esm/entry.webpack";
 
 const useStyles = makeStyles((theme: Theme) => ({
 	root: {},
@@ -30,12 +32,13 @@ function Resume() {
 					<Link
 						className={classes.download}
 						download="Tiffany Wong - Resume.pdf"
-						href="../assets/resume.pdf"
+						href="./components/Resume/resume.pdf"
 					>
 						<i className="fa fa-fw fa-download"></i>
 					</Link>
 				</Tooltip>
 			</Typography>
+			{/* <Document file="./components/Resume/resume.pdf" /> */}
 		</>
 	);
 }

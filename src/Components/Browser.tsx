@@ -47,6 +47,14 @@ const useStyles = makeStyles((theme: Theme) => ({
 		marginTop: 10,
 		minHeight: 150,
 	},
+	code: {
+		backgroundColor: theme.palette.primary.dark,
+		color: "white",
+		"& code": {
+			display: "inline-block",
+			margin: 8,
+		},
+	},
 	error: {
 		textAlign: "center",
 		top: "calc(50% - 75px)",
@@ -54,12 +62,17 @@ const useStyles = makeStyles((theme: Theme) => ({
 		width: "100%",
 		zIndex: -1,
 	},
+	errorMessage: {
+		fontSize: "0.75rem",
+		top: "55%",
+	},
 }));
 
 export interface Props {
 	title: string;
 	display: (boolean: boolean) => void;
 	isDisplayed: boolean;
+	code?: boolean;
 	height?: number;
 	children?: JSX.Element;
 }
@@ -67,9 +80,7 @@ export interface Props {
 export const Browser: React.FC<Props> = (props) => {
 	const classes = useStyles();
 
-	const { title, display, isDisplayed, height, children } = props;
-
-	// const [showBrowser, setShowBrowser] = React.useState<boolean>(show ?? true);
+	const { title, display, isDisplayed, code, height, children } = props;
 
 	return (
 		<div className={classes.root}>
@@ -94,14 +105,29 @@ export const Browser: React.FC<Props> = (props) => {
 							<span className={classes.title}>{title}</span>
 						</div>
 					</Box>
-					<div className={classes.inner} style={{ height: height }}>
-						{children}
+					<div
+						className={`${classes.inner} ${
+							code ? classes.code : ""
+						}`}
+						style={{ height: height }}
+					>
+						{code ? <code>{children}</code> : children}
 					</div>
 				</div>
 			</Zoom>
-			<Typography className={classes.error} variant="h1">
-				404
-			</Typography>
+			{!isDisplayed ? (
+				<>
+					<Typography className={classes.error} variant="h1">
+						:)
+					</Typography>
+					<Typography
+						className={`${classes.error} ${classes.errorMessage}`}
+					>
+						Click the undo icon next to the title to show the
+						content again.
+					</Typography>
+				</>
+			) : null}
 		</div>
 	);
 };

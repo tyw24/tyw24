@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import About from "./About";
 import ProjectDetail from "./Projects/ProjectDetail";
 import Projects from "./Projects/Projects";
-import Resume from "./Resume";
+import Resume from "./Resume/Resume";
 
 const useStyles = makeStyles((theme: Theme) => ({
 	root: {
@@ -21,6 +21,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 
 function Content() {
 	const classes = useStyles();
+	const path = "tiffwong.github.io";
 
 	return (
 		<div className={classes.root}>
@@ -29,9 +30,9 @@ function Content() {
 					<Route path="/projects/:project">
 						<ProjectDetail />
 					</Route>
-					<Route component={Projects} path="/projects" />
-					<Route component={Resume} path="/resume" />
-					<Route component={About} path="/" />
+					<Route component={Projects} path={`${path}/projects`} />
+					<Route component={Resume} path={`${path}/resume`} />
+					<Route component={About} path={path} />
 				</Switch>
 			</Router>
 		</div>
