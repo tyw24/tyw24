@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import About from "./About";
 import ProjectDetail from "./Projects/ProjectDetail";
 import Projects from "./Projects/Projects";
-import Resume from "./Resume/Resume";
+import Resume from "./Resume";
 
 const useStyles = makeStyles((theme: Theme) => ({
 	root: {

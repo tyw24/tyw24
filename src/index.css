@@ -4,6 +4,8 @@
 	box-sizing: border-box;
 }
 
+@import "~react-image-gallery/styles/css/image-gallery.css";
+
 body {
 	height: 100%;
 	margin: 0;

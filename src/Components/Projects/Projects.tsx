@@ -17,7 +17,7 @@ function Projects() {
 	const [display, setDisplay] = React.useState<boolean>(true);
 
 	const projects = [
-		"linode",
+		// "linode",
 		"comcast",
 		"smart_security",
 		"drexel_wics",
@@ -47,8 +47,8 @@ function Projects() {
 				height={350}
 			>
 				<Grid className={classes.root} container>
-					{projects.map((project) => (
-						<ProjectLink title={project} />
+					{projects.map((project, idx) => (
+						<ProjectLink title={project} key={idx} />
 					))}
 				</Grid>
 			</Browser>

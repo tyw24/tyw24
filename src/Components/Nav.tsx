@@ -6,14 +6,15 @@ import Avatar from "./Avatar";
 const useStyles = makeStyles((theme: Theme) => ({
 	root: {
 		borderRight: `1px solid ${theme.palette.primary.light}`,
-		height: "calc(100vh - 160px)",
 		maxWidth: 400,
+		minHeight: "calc(100vh - 160px)",
 		paddingLeft: 60,
 		paddingRight: 40,
 		[theme.breakpoints.down("sm")]: {
 			borderRight: "none",
 			height: "auto",
 			margin: "auto",
+			minHeight: "unset",
 		},
 	},
 	nav: {
@@ -71,7 +72,6 @@ const useStyles = makeStyles((theme: Theme) => ({
 
 function Nav() {
 	const classes = useStyles();
-	const path = "tiffwong.github.io";
 
 	return (
 		<Box
@@ -79,6 +79,7 @@ function Nav() {
 			display="flex"
 			flexDirection="column"
 			alignItems="center"
+			justifyContent="stretch"
 		>
 			<Avatar />
 			<nav className={classes.nav} aria-label="">

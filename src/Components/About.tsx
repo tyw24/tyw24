@@ -59,6 +59,7 @@ function About() {
 					<i className="fas fa-fw fa-briefcase"></i>
 					Software Engineer
 				</Typography>
+				{/* @todo: rewrite bio */}
 				<Typography className={classes.copy}>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
 					do eiusmod tempor incididunt ut labore et dolore magna

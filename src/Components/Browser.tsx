@@ -54,6 +54,12 @@ const useStyles = makeStyles((theme: Theme) => ({
 			display: "inline-block",
 			margin: 8,
 		},
+		"& i": {
+			color: theme.palette.primary.main,
+			marginRight: 10,
+			position: "relative",
+			top: -1,
+		},
 	},
 	error: {
 		textAlign: "center",
