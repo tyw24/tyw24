@@ -4,29 +4,26 @@ import Browser from "components/Browser";
 import React from "react";
 import ImageGallery from "react-image-gallery";
 import { useParams } from "react-router-dom";
+import DrexelCastleHome from "../../assets/castle-home.png";
+import DrexelCastleMission from "../../assets/castle-mission.png";
+import DrexelCastleOverview from "../../assets/castle-overview.png";
+import ComcastHome from "../../assets/comcast-home.png";
+import ComcastInternet from "../../assets/comcast-internet.png";
+import ComcastOffers from "../../assets/comcast-offers.png";
+import ComcastViewOffer from "../../assets/comcast-view-offer.png";
+import SmartSecurityAlarms from "../../assets/ss-alarms.png";
+import SmartSecurityEntrants from "../../assets/ss-entrants.png";
+import SmartSecurityHome from "../../assets/ss-home.png";
+import WalmartLabs from "../../assets/walmart-labs.png";
+import DrexelWICSCharter from "../../assets/wics-charter.png";
+import DrexelWICSHome from "../../assets/wics-home.png";
 
 const useStyles = makeStyles((theme: Theme) => ({
-	root: {
-		cursor: "pointer",
-		fontSize: "0.75rem",
-		padding: 10,
-		width: "fit-content",
-		"& i": {
-			color: theme.palette.primary.main,
-			opacity: 0.75,
-		},
-		"&:hover $title": {
-			backgroundColor: "rgba(225, 225, 224, 0.75)",
-			borderRadius: 8,
-			padding: "0 8px",
-		},
-	},
 	title: {
 		color: theme.palette.primary.dark,
 	},
 	gallery: {
-		marginBottom: 26,
-		width: 400,
+		width: 425,
 		"& .image-gallery-slide": {
 			maxHeight: 300,
 			overflowY: "auto",
@@ -53,11 +50,21 @@ const useStyles = makeStyles((theme: Theme) => ({
 		},
 	},
 	details: {
-		padding: "2px 8px",
+		backgroundColor: "rgba(225, 225, 224, 0.25)",
+		marginTop: 20,
+		padding: "16px 20px",
+		"& p": {
+			textAlign: "justify",
+		},
+	},
+	icon: {
+		color: theme.palette.primary.main,
+		marginRight: 12,
+		position: "relative",
+		top: -2,
 	},
 	link: {
-		color: "white",
-		fontWeight: 600,
+		color: theme.palette.primary.dark,
 	},
 	desc: {
 		marginTop: 8,
@@ -73,16 +80,12 @@ const useStyles = makeStyles((theme: Theme) => ({
 			display: "inline-block",
 			color: theme.palette.primary.main,
 			content: '"\u2022"',
+			fontFamily: '"Playfair Display", serif',
 			fontWeight: 600,
 			marginLeft: -12,
 			position: "relative",
-			top: 1,
+			top: -2,
 			width: 16,
-		},
-		"& a": {
-			color: "white",
-			cursor: "pointer",
-			fontWeight: 600,
 		},
 	},
 }));
@@ -104,12 +107,12 @@ export const ProjectDetail: React.FC<{}> = (props) => {
 			tech: "HTML5, CSS, JavaScript, JQuery, Amazon AWS, Adobe InDesign, Sketch",
 			link: "",
 			desc: (
-				<p>
+				<Typography>
 					As part of the Digital First web prototyping team, I
 					collaborated with designers to develop the Comcast Business
 					SMB re-architecture launch that won the MarCom Platinum
 					Award in 2018.
-				</p>
+				</Typography>
 			),
 		},
 		{
@@ -118,13 +121,13 @@ export const ProjectDetail: React.FC<{}> = (props) => {
 			link: "",
 			desc: (
 				<>
-					<p>
+					<Typography>
 						As part of Drexel University’s curriculum, every senior
 						has to work in a team to develop a yearlong capstone
 						project that involves extensive documentation, project
 						management and a testing plan.
-					</p>
-					<p>
+					</Typography>
+					<Typography>
 						The goal of Smart Security is to resolve the lack of
 						security alarm systems for people who are renting an
 						apartment. We have created a security alarm system that
@@ -132,12 +135,13 @@ export const ProjectDetail: React.FC<{}> = (props) => {
 						utilizing a Google Home to detect possible intrusions
 						with real-time updates that are accessible through web
 						and mobile devices.
-					</p>
+					</Typography>
 					<div style={{ marginBottom: 4 }}>
-						Documentation:
+						<Typography>Documentation:</Typography>
 						<ul>
 							<li>
 								<Link
+									className={classes.link}
 									href="/SmartSecurity/atp.pdf"
 									target="_blank"
 								>
@@ -146,6 +150,7 @@ export const ProjectDetail: React.FC<{}> = (props) => {
 							</li>
 							<li>
 								<Link
+									className={classes.link}
 									href="/SmartSecurity/poster.pdf"
 									target="_blank"
 								>
@@ -154,6 +159,7 @@ export const ProjectDetail: React.FC<{}> = (props) => {
 							</li>
 							<li>
 								<Link
+									className={classes.link}
 									href="/SmartSecurity/sds.pdf"
 									target="_blank"
 								>
@@ -162,6 +168,7 @@ export const ProjectDetail: React.FC<{}> = (props) => {
 							</li>
 							<li>
 								<Link
+									className={classes.link}
 									href="/SmartSecurity/srs.pdf"
 									target="_blank"
 								>
@@ -170,6 +177,7 @@ export const ProjectDetail: React.FC<{}> = (props) => {
 							</li>
 							<li>
 								<Link
+									className={classes.link}
 									href="/SmartSecurity/manual.pdf"
 									target="_blank"
 								>
@@ -186,7 +194,7 @@ export const ProjectDetail: React.FC<{}> = (props) => {
 			tech: "HTML5, CSS, LESS, Bootstrap",
 			link: "http://drexelwics.hosting.acm.org/",
 			desc: (
-				<p>
+				<Typography>
 					The Women in Computing Society (WiCS) is an official student
 					chapter of ACM-W and during my last year as a member, I
 					served as the Chair of Web Development. Part of my
@@ -196,7 +204,7 @@ export const ProjectDetail: React.FC<{}> = (props) => {
 					website that will helpfully improve communcation and better
 					serve the mission of empowering women in computer fields to
 					succeed and thrive in the Drexel community and beyond.
-				</p>
+				</Typography>
 			),
 		},
 		{
@@ -205,21 +213,21 @@ export const ProjectDetail: React.FC<{}> = (props) => {
 			link: "http://drexel.edu/castle/",
 			desc: (
 				<>
-					<p>
+					<Typography>
 						The Center for the Advancement of STEM Teaching and
 						Learning Experience (CASTLE) at Drexel University was
 						founded in 2014. It is responsible for many initiatives
 						that aims to campaign experiential learning and
 						innovation in STEM education.
-					</p>
-					<p>
+					</Typography>
+					<Typography>
 						Since the organization is relatively new and constantly
 						growing, a new website was needed to capture the breath
 						of its initiatives. In order to do so, I collaborated
 						with the design and social media team to implement a
 						website that would match the new branding and style
 						guide.
-					</p>
+					</Typography>
 				</>
 			),
 		},
@@ -228,65 +236,66 @@ export const ProjectDetail: React.FC<{}> = (props) => {
 			tech: "HTML5, CSS, Bootstrap, JavaScript, JQuery",
 			link: "https://tiffwong.github.io/walmart/",
 			desc: (
-				<p>
+				<Typography>
 					A programming challenge for Walmart Labs involved simulating
 					a reservation request system for a movie theater. Requests
 					are processed by uploading a file that matches the input
 					format given and producing an output file that contains a
 					reservation identifier and comma-delimited list of the
 					assigned seats.
-				</p>
+				</Typography>
 			),
 		},
 	];
 
-	// @todo: preload images by bundling, aka move from public to components maybe
 	const images = [
 		{
 			name: "linode",
-			images: [
-				{ original: "/Linode/smart-security_home.png" },
-				{ original: "/Linode/smart-security_alarms.png" },
-				{ original: "/Linode/smart-security_entrants.png" },
-			],
+			images: [],
 		},
 		{
 			name: "comcast",
 			images: [
-				{ original: "/Comcast/comcast_home.png" },
-				{ original: "/Comcast/comcast_business-internet.png" },
-				{ original: "/Comcast/comcast_offers.png" },
-				{ original: "/Comcast/comcast_view-offer.png" },
+				{ original: ComcastHome },
+				{ original: ComcastInternet },
+				{ original: ComcastOffers },
+				{ original: ComcastViewOffer },
 			],
 		},
 		{
 			name: "smart security",
 			images: [
-				{ original: "/SmartSecurity/smart-security_home.png" },
-				{ original: "/SmartSecurity/smart-security_alarms.png" },
-				{ original: "/SmartSecurity/smart-security_entrants.png" },
+				{ original: SmartSecurityHome },
+				{ original: SmartSecurityAlarms },
+				{ original: SmartSecurityEntrants },
 			],
 		},
 		{
 			name: "drexel wics",
 			images: [
-				{ original: "/DrexelWICS/drexel-wics_home.png" },
-				{ original: "/DrexelWICS/drexel-wics_charter.png" },
+				{ original: DrexelWICSHome },
+				{ original: DrexelWICSCharter },
 			],
 		},
 		{
 			name: "drexel castle",
 			images: [
-				{ original: "/DrexelCASTLE/castle_home.png" },
-				{ original: "/DrexelCASTLE/castle_mission.png" },
-				{ original: "/DrexelCASTLE/castle_overview.png" },
+				{ original: DrexelCastleHome },
+				{ original: DrexelCastleMission },
+				{ original: DrexelCastleOverview },
 			],
 		},
 		{
 			name: "walmart labs",
-			images: [{ original: "/WalmartLabs/walmart-labs.png" }],
+			images: [{ original: WalmartLabs }],
 		},
 	];
+
+	const showLink =
+		projects.find(
+			(project) =>
+				project.name === projectDisplayName && project.link === ""
+		) === undefined;
 
 	return (
 		<>
@@ -304,56 +313,58 @@ export const ProjectDetail: React.FC<{}> = (props) => {
 				) : null}
 			</Typography>
 			<Box display="flex" justifyContent="center">
-				<div className={classes.gallery}>
-					<ImageGallery
-						items={
-							images.find(
-								(image) => image.name === projectDisplayName
-							)?.images ?? []
-						}
-						showFullscreenButton={false}
-						showPlayButton={false}
-					/>
-				</div>
+				<Browser
+					title={project}
+					display={setDisplay}
+					isDisplayed={display}
+				>
+					<div className={classes.gallery}>
+						<ImageGallery
+							items={
+								images.find(
+									(image) => image.name === projectDisplayName
+								)?.images ?? []
+							}
+							showFullscreenButton={false}
+							showPlayButton={false}
+						/>
+					</div>
+				</Browser>
 			</Box>
-			<Browser
-				title={project}
-				display={setDisplay}
-				isDisplayed={display}
-				code
-			>
-				<div className={classes.details}>
-					<div>
-						<i className="fas fa-fw fa-xs fa-code"></i>
-						{
-							projects.find(
-								(project) => project.name === projectDisplayName
-							)?.tech
-						}
-					</div>
-					{/* @todo: hide if no link is provided for project */}
-					{projects.some((project) => project.link !== "''") ? (
-						<div>
-							<i className="fas fa-fw fa-xs fa-link"></i>
-							<Link className={classes.link} href="">
-								{
-									projects.find(
-										(project) =>
-											project.name === projectDisplayName
-									)?.link
-								}
-							</Link>
-						</div>
-					) : null}
-					<div className={classes.desc}>
-						{
-							projects.find(
-								(project) => project.name === projectDisplayName
-							)?.desc
-						}
-					</div>
+			<div className={classes.details}>
+				<Typography>
+					<i
+						className={`${classes.icon} fas fa-fw fa-xs fa-code`}
+					></i>
+					{
+						projects.find(
+							(project) => project.name === projectDisplayName
+						)?.tech
+					}
+				</Typography>
+				{showLink ? (
+					<Typography>
+						<i
+							className={`${classes.icon} fas fa-fw fa-xs fa-link`}
+						></i>
+						<Link className={classes.link} href="">
+							{
+								projects.find(
+									(project) =>
+										project.name === projectDisplayName
+								)?.link
+							}
+						</Link>
+					</Typography>
+				) : null}
+				<div className={classes.desc}>
+					{
+						projects.find(
+							(project) => project.name === projectDisplayName
+						)?.desc
+					}
 				</div>
-			</Browser>
+			</div>
 		</>
 	);
 };

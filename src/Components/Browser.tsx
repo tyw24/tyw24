@@ -10,13 +10,13 @@ const useStyles = makeStyles((theme: Theme) => ({
 		backgroundColor: "white",
 		border: `1px solid ${theme.palette.primary.light}`,
 		borderRadius: 5,
-		padding: "8px 16px",
+		padding: "8px 16px 12px",
 	},
 	button: {
 		borderRadius: 50,
 		height: 10,
 		width: 10,
-		marginTop: 3,
+		marginTop: 2,
 		marginRight: 6,
 	},
 	red: {
@@ -32,45 +32,31 @@ const useStyles = makeStyles((theme: Theme) => ({
 	search: {
 		border: `1px solid ${theme.palette.primary.light}`,
 		borderRadius: 50,
-		fontSize: "0.75rem",
+		fontSize: "0.5rem",
 		letterSpacing: 2,
-		marginLeft: 10,
-		padding: "2px 16px",
+		marginLeft: 6,
+		padding: "2px 10px",
 		textTransform: "uppercase",
-		width: "calc(100% - 60px)",
+		width: "calc(100% - 50px)",
 	},
 	title: {
 		fontFamily: '"Roboto", sans-serif',
 	},
 	inner: {
 		border: `1px solid ${theme.palette.primary.light}`,
-		marginTop: 10,
+		marginTop: 8,
 		minHeight: 150,
-	},
-	code: {
-		backgroundColor: theme.palette.primary.dark,
-		color: "white",
-		"& code": {
-			display: "inline-block",
-			margin: 8,
-		},
-		"& i": {
-			color: theme.palette.primary.main,
-			marginRight: 10,
-			position: "relative",
-			top: -1,
-		},
 	},
 	error: {
 		textAlign: "center",
-		top: "calc(50% - 75px)",
+		top: "calc(50% - 100px)",
 		position: "absolute",
 		width: "100%",
 		zIndex: -1,
 	},
 	errorMessage: {
 		fontSize: "0.75rem",
-		top: "55%",
+		top: "48%",
 	},
 }));
 
@@ -78,7 +64,6 @@ export interface Props {
 	title: string;
 	display: (boolean: boolean) => void;
 	isDisplayed: boolean;
-	code?: boolean;
 	height?: number;
 	children?: JSX.Element;
 }
@@ -86,7 +71,7 @@ export interface Props {
 export const Browser: React.FC<Props> = (props) => {
 	const classes = useStyles();
 
-	const { title, display, isDisplayed, code, height, children } = props;
+	const { title, display, isDisplayed, height, children } = props;
 
 	return (
 		<div className={classes.root}>
@@ -111,13 +96,8 @@ export const Browser: React.FC<Props> = (props) => {
 							<span className={classes.title}>{title}</span>
 						</div>
 					</Box>
-					<div
-						className={`${classes.inner} ${
-							code ? classes.code : ""
-						}`}
-						style={{ height: height }}
-					>
-						{code ? <code>{children}</code> : children}
+					<div className={classes.inner} style={{ height: height }}>
+						{children}
 					</div>
 				</div>
 			</Zoom>
@@ -129,8 +109,9 @@ export const Browser: React.FC<Props> = (props) => {
 					<Typography
 						className={`${classes.error} ${classes.errorMessage}`}
 					>
-						Click the undo icon next to the title to show the
-						content again.
+						Click the undo icon next to the title to
+						<br />
+						show the content again.
 					</Typography>
 				</>
 			) : null}

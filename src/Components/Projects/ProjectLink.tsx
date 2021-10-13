@@ -35,7 +35,7 @@ export const ProjectLink: React.FC<Props> = (props) => {
 	const { title } = props;
 
 	return (
-		<Grid container justifyContent="center" xs={3}>
+		<Grid container item justifyContent="center" xs={3}>
 			<Grid
 				className={classes.root}
 				container
