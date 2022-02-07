@@ -51,7 +51,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 	},
 	details: {
 		backgroundColor: "rgba(225, 225, 224, 0.25)",
-		marginTop: 20,
+		marginTop: 24,
 		padding: "16px 20px",
 		"& p": {
 			textAlign: "justify",
@@ -325,6 +325,7 @@ export const ProjectDetail: React.FC<{}> = (props) => {
 									(image) => image.name === projectDisplayName
 								)?.images ?? []
 							}
+							infinite={false}
 							showFullscreenButton={false}
 							showPlayButton={false}
 						/>

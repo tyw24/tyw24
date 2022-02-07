@@ -328,7 +328,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 		borderRadius: 50,
 		color: theme.palette.primary.dark,
 		fontFamily: '"Roboto", sans-serif',
-		fontSize: 11,
+		fontSize: "0.75rem",
 		letterSpacing: 2,
 		height: 35,
 		width: 80,

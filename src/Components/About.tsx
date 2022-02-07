@@ -61,14 +61,17 @@ function About() {
 				</Typography>
 				{/* @todo: rewrite bio */}
 				<Typography className={classes.copy}>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-					do eiusmod tempor incididunt ut labore et dolore magna
-					aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-					ullamco laboris nisi ut aliquip ex ea commodo consequat.
-					Duis aute irure dolor in reprehenderit in voluptate velit
-					esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-					occaecat cupidatat non proident, sunt in culpa qui officia
-					deserunt mollit anim id est laborum.
+					I am a Front-End Web Developer located in Philadelphia with
+					a passion for responsive web design, quality user
+					experience, and converting complex challenges into simple
+					solutions. I currently work at Comcast as part of the
+					prototyping team where we create high fidelity prototypes
+					used to show stakeholders, perform A/B testing, and easily
+					reflect architectural changes. <br />
+					As a recent graduate of Drexel University, I majored in
+					Computer Science with concentrations in Human-Computer
+					Interaction and Software Engineering. I also had the honor
+					of being one of the speakers at my commencement.
 				</Typography>
 			</Box>
 			<Box
