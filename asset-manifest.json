@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/static/css/main.4524b164.chunk.css",
+    "main.js": "/static/js/main.2b3d47ac.chunk.js",
+    "main.js.map": "/static/js/main.2b3d47ac.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.0d7c142e.js",
+    "runtime-main.js.map": "/static/js/runtime-main.0d7c142e.js.map",
+    "static/css/2.a4070788.chunk.css": "/static/css/2.a4070788.chunk.css",
+    "static/js/2.05d2b019.chunk.js": "/static/js/2.05d2b019.chunk.js",
+    "static/js/2.05d2b019.chunk.js.map": "/static/js/2.05d2b019.chunk.js.map",
+    "static/js/3.31ee6335.chunk.js": "/static/js/3.31ee6335.chunk.js",
+    "static/js/3.31ee6335.chunk.js.map": "/static/js/3.31ee6335.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.a4070788.chunk.css.map": "/static/css/2.a4070788.chunk.css.map",
+    "static/css/main.4524b164.chunk.css.map": "/static/css/main.4524b164.chunk.css.map",
+    "static/js/2.05d2b019.chunk.js.LICENSE.txt": "/static/js/2.05d2b019.chunk.js.LICENSE.txt",
+    "static/media/castle-home.bab8963d.png": "/static/media/castle-home.bab8963d.png",
+    "static/media/castle-mission.02b282c1.png": "/static/media/castle-mission.02b282c1.png",
+    "static/media/castle-overview.5bb8e5f3.png": "/static/media/castle-overview.5bb8e5f3.png",
+    "static/media/comcast-home.da348c28.png": "/static/media/comcast-home.da348c28.png",
+    "static/media/comcast-internet.bc6ac680.png": "/static/media/comcast-internet.bc6ac680.png",
+    "static/media/comcast-offers.0eee1c6b.png": "/static/media/comcast-offers.0eee1c6b.png",
+    "static/media/comcast-view-offer.930ed950.png": "/static/media/comcast-view-offer.930ed950.png",
+    "static/media/ss-alarms.66e50a18.png": "/static/media/ss-alarms.66e50a18.png",
+    "static/media/ss-entrants.4fa1f2d3.png": "/static/media/ss-entrants.4fa1f2d3.png",
+    "static/media/ss-home.920456be.png": "/static/media/ss-home.920456be.png",
+    "static/media/walmart-labs.00850fe2.png": "/static/media/walmart-labs.00850fe2.png",
+    "static/media/wics-charter.dfbb2070.png": "/static/media/wics-charter.dfbb2070.png",
+    "static/media/wics-home.eb735506.png": "/static/media/wics-home.eb735506.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0d7c142e.js",
+    "static/css/2.a4070788.chunk.css",
+    "static/js/2.05d2b019.chunk.js",
+    "static/css/main.4524b164.chunk.css",
+    "static/js/main.2b3d47ac.chunk.js"
+  ]
+}
