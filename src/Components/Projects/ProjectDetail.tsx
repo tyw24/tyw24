@@ -80,7 +80,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 			display: "inline-block",
 			color: theme.palette.primary.main,
 			content: '"\u2022"',
-			fontFamily: '"Playfair Display", serif',
+			fontFamily: '"Mukta", sans-serif',
 			fontWeight: 600,
 			marginLeft: -12,
 			position: "relative",

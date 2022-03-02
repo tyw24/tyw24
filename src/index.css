@@ -19,20 +19,3 @@ code {
 		monospace;
 	font-size: 12px;
 }
-
-.undo {
-	display: inline-block;
-	cursor: pointer;
-	margin-left: 8px;
-	position: relative;
-	top: -2px;
-}
-
-.undo i {
-	color: #e1e1e0;
-	font-size: 1.25rem;
-}
-
-.undo i:hover {
-	color: #ffc600;
-}

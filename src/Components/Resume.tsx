@@ -31,11 +31,11 @@ function Resume() {
 	return (
 		<>
 			<Typography variant="h2">
-				Resume{" "}
+				Resume
 				<Tooltip title="Download" arrow placement="top">
 					<Link
 						className={classes.download}
-						download="Tiffany Wong - Resume.pdf"
+						download="TiffanyWong_Resume.pdf"
 						href="/resume.pdf"
 					>
 						<i className="fa fa-fw fa-download"></i>

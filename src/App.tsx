@@ -7,12 +7,11 @@ import theme from "./theme";
 
 const useStyles = makeStyles({
 	root: {
-		display: "flex",
-		justifyContent: "center",
-		margin: "80px auto",
 		maxWidth: 1280,
 		[theme.breakpoints.down("sm")]: {
+			display: "flex",
 			flexDirection: "column",
+			margin: "20px 40px",
 		},
 	},
 });

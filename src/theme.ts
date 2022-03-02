@@ -16,7 +16,7 @@ const theme = createTheme({
     },
     primary: { 
       main: '#ffc600',
-      light: '#e1e1e0',
+      light: '#cacac9',
       dark: '#333',
     },
     secondary: {
@@ -25,36 +25,58 @@ const theme = createTheme({
     },
   },
   overrides: {
+    MuiLink: {
+      root: {
+        color: '#333',
+      },
+      underlineAlways: {
+        textDecorationColor: '#ffc600',
+        textDecorationThickness: 4,
+      }
+    },
     MuiTooltip: {
       tooltip: {
         backgroundColor: '#333',
         letterSpacing: 2,
         textTransform: 'uppercase',
       },
+      arrow: {
+        "&::before": {
+          backgroundColor: '#333',
+        }
+      }
     },
   },
   typography: {
-    fontFamily: '"Open Sans", sans-serif',
+    fontFamily: '"Mukta", sans-serif',
     h1: {
       color: 'black',
-      fontFamily: '"Playfair Display", serif',
+      fontFamily: '"Mukta", sans-serif',
       fontSize: '4rem',
       fontWeight: 700,
       marginTop: 0,
-      marginBottom: 20,
+      marginBottom: 12,
     },
     h2: {
       color: 'black',
-      fontFamily: '"Roboto", sans-serif',
+      fontFamily: '"Mukta", sans-serif',
       fontSize: '1.875rem',
       fontWeight: 600,
       letterSpacing: 2,
       marginBottom: 20,
       textTransform: 'uppercase',
     },
+    h3: {
+      color: 'black',
+      fontFamily: '"Mukta", sans-serif',
+      fontSize: '1.25rem',
+      fontWeight: 600,
+      marginTop: 12,
+      marginBottom: 16,
+    },
     body1: {
       color: '#333',
-      fontSize: 13
+      fontSize: '0.875rem'
     },
   },
 })
