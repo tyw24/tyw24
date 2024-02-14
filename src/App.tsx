@@ -1,26 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import { makeStyles, ThemeProvider } from '@material-ui/core/styles';
+import Content from './component/Content';
+import Nav from './component/Nav';
+import theme from './theme';
+
+const useStyles = makeStyles({
+	root: {
+		display: 'flex',
+		marginTop: 80,
+		maxWidth: 1280,
+		[theme.breakpoints.down('sm')]: {
+			display: 'flex',
+			flexDirection: 'column',
+			margin: '20px 40px',
+		},
+	},
+});
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const classes = useStyles();
+
+	return (
+		<ThemeProvider theme={ theme }>
+			<CssBaseline />
+			<div className={ classes.root }>
+				<Nav />
+				<Content />
+			</div>
+		</ThemeProvider>
+	);
 }
 
 export default App;
