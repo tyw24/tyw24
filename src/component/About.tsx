@@ -193,7 +193,7 @@ function About() {
 	return (
 		<Box display='flex' flexDirection='column'>
 			<span className={ classes.centerOnMobile }>
-				<Typography variant='h1'>Tiffany Wong</Typography>
+				<Typography variant='h1'>TIFFANY WONG</Typography>
 				<Typography className={ classes.copy }>
 					Hi, I'm a Software Engineer at{' '}
 					<Link href='https://adobe.com' target='_blank' underline='always'>Adobe</Link>{' '}

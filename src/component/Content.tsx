@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 	wrapper: {
 		height: 'calc(100vh - 165px)',
 		overflowY: 'scroll',
-        marginTop: 20,
+        marginTop: 36,
 		paddingBottom: 120,
 		'&::-webkit-scrollbar': {
 			display: 'none',
