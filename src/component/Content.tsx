@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 		height: 'calc(100vh - 165px)',
 		overflowY: 'scroll',
         marginTop: 36,
-		paddingBottom: 120,
+		paddingBottom: 200,
 		'&::-webkit-scrollbar': {
 			display: 'none',
 		},
