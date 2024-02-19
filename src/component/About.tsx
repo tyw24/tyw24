@@ -11,7 +11,7 @@ interface Detail {
 	title: string;
 	company: string;
 	time: string;
-	desc: JSX.Element;
+	desc?: JSX.Element;
 }
 
 const useStyles = makeStyles((theme: Theme) => ({
@@ -145,6 +145,14 @@ function About() {
 		},
 	];
 
+	const cert = [
+		{
+			title: 'UX Certification',
+			company: 'Nielsen Norman Group',
+			time: 'June 2023',
+		},
+	]
+
 	const renderDetails = (heading: string, details: Detail[]) => {
 		return (
 			<>
@@ -161,17 +169,19 @@ function About() {
 							) : null }
 							<div className={ classes.detailsRight }>
 								<Typography className={ classes.position }>
-									<strong>{detail.title}</strong>,{' '}
+									<strong>{ detail.title }</strong>,{' '}
 									{ detail.company }
 								</Typography>
 								{ matchesSmDown ? (
 									<Typography className={ classes.time }>
-										{detail.time}
+										{ detail.time }
 									</Typography>
 								) : null }
-								<Typography className={ classes.desc }>
-									{ detail.desc }
-								</Typography>
+								{ detail.desc &&
+									<Typography className={ classes.desc }>
+										{ detail.desc }
+									</Typography>
+								}
 							</div>
 						</Box>
 					);
@@ -196,6 +206,7 @@ function About() {
 			</span>
 			{ renderDetails('Experience', jobs) }
 			{ renderDetails('Education', school) }
+			{ renderDetails('Certification', cert) }
 		</Box>
 	);
 }
