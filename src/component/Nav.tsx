@@ -140,7 +140,7 @@ function Nav() {
 			<nav className={ classes.nav } aria-label=''>
 				<ul id='menu' role='menubar' aria-label=''>
 					<li>
-						<Link className={ classes.link } href='/' tabIndex={ 0}>
+						<Link className={ classes.link } href='/' tabIndex={ 0 }>
 							About
 						</Link>
 					</li>
