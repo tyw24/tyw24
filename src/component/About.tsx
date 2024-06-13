@@ -91,10 +91,10 @@ function About() {
 			desc: (
 				<ul>
 					<li>
-                        Implement experiments and new features for Document Cloud that enhance the user experience for customers worldwide
+						Led implementation of experiments and new features within Acrobat Web, prioritizing user experience enhancements globally while actively contributing to unit and automation testing frameworks.
 					</li>
 					<li>
-                        Work across multiple repositories, ensuring consistency and efficiency in code implementation and maintenance
+						Efficiently collaborate across multiple repositories to maintain code consistency and integrity, actively participating in unit and automation testing to ensure robust functionality and code reliability.
 					</li>
 				</ul>
 			),
@@ -106,10 +106,10 @@ function About() {
 			desc: (
 				<ul>
 					<li>
-                        Redesigned the entire user interface to display more detailed information, improve navigation, and expand network usage metrics
+						Redesigned the entire user interface to display more detailed information, improve navigation, and expand network usage metrics.
 					</li>
 					<li>
-                        Conducted usability tests, reviewed areas of improvement,and designed workflows before development with the UX team
+						Collaborated closely with the UX team to design workflows before development, conduct usability tests, and integrate feedback from open-source contributors.
 					</li>
 				</ul>
 			),
@@ -121,10 +121,10 @@ function About() {
 			desc: (
 				<ul>
 					<li>
-						Developed high fidelity and responsive prototypes as proof of concepts to showcase new features and conduct A/B testing
+						Crafted high-fidelity, responsive prototypes to validate new features and facilitate A/B testing.
 					</li>
 					<li>
-						Collaborated with designers to launch the new Comcast Business SMB website that won the MarCom Platinum Award in 2018
+						Partnered closely with designers to successfully launch the award-winning Comcast Business SMB website, honored with the MarCom Platinum Award in 2018.
 					</li>
 				</ul>
 			),
